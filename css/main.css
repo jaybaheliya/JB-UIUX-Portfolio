@@ -1619,7 +1619,10 @@ blockquote {
     }
 
     .blog-card .blog-item-title {
-        margin: 5px 0 0
+        margin: 5px 0 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .blog-card .post-meta {
