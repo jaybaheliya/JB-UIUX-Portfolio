@@ -3296,6 +3296,34 @@ blockquote {
     color: #aaa
 }
 
+#cursor {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #ff714a;
+    position: absolute;
+    box-sizing: border-box;
+    transition: 0.1s linear;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+  }
+  h4:hover ~ #cursor{
+     transform: scale(5);
+     height: 45px;
+     width: 45px;
+  }
+  h4:hover ~ #cursor {
+    transform: scale(3);
+    height: 45px;
+    width: 45px;
+ }
+.highlight{
+    transform: scale(5);
+    height: 45px;
+    width: 45px;
+}
 /*--------------------RubberBand--------------------------*/
 
 .RubberBandEffect {

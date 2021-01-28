@@ -18,9 +18,13 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="js/modernizr.custom.js"></script>
+
+
+
 </head>
 
 <body onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
+    <span class="" id="cursor"></span>
     <div class="preloader">
         <div class="preloader-animation">
             <div class="preloader-spinner"> </div>
@@ -1204,12 +1208,12 @@
             var letters = $('h2.hp-main-title').text();
             var nHTML = '';
             for (var letter of letters) {
-                nHTML += "<span class='RubberBandEffect'>" + letter + "</span>" ;
+                nHTML += "<span class='RubberBandEffect'>" + letter + "</span>";
             }
             $('h2.hp-main-title').html(nHTML);
         })
     </script>
-     <script language="JavaScript">
+    <script language="JavaScript">
 
         //////////F12 disable code////////////////////////
         document.onkeypress = function (event) {
@@ -1249,7 +1253,7 @@
             if (document.layers || (document.getElementById && !document.all)) {
                 if (e.which == 2 || e.which == 3) {
                     alert(message);
-                     return false;
+                    return false;
                 }
             }
         }
@@ -1291,6 +1295,25 @@
             }
             return true;
         }
+    </script>
+    <script>
+        var cursor = document.getElementById("cursor");
+        var zoom1 = document.getElementsByTagName("h4");
+        window.addEventListener("mousemove", function (e) {
+            let x = e.pageX;
+            let y = e.pageY;
+            cursor.style.left = x + "px";
+            cursor.style.top = y + "px";
+        });
+
+       zoom1[0].forEach(Hfour => {
+           Hfour.addEventListener("mouseleave", () => {
+                cursor.classList.remove("highlight");
+           });
+           Hfour.addEventListener("mouseover", () => {
+                cursor.classList.add("highlight");
+           });
+       });
     </script>
 
     <script src="js/bootstrap.min.js"></script>
