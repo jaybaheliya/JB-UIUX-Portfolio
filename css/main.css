@@ -807,6 +807,9 @@ blockquote {
                     font-weight: 600;
                     min-width: 100px;
                 }
+                .about .about-content .personal-info ul li span a{
+                  display: block;
+                }
 .hide-minicv {
     display:none;
 }
