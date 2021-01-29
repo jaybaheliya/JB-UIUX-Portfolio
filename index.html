@@ -20,11 +20,10 @@
     <script src="js/modernizr.custom.js"></script>
 
 
-
 </head>
 
 <body onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
-    <span class="" id="cursor"></span>
+    <span class="cursor" id="cursor"></span>
     <div class="preloader">
         <div class="preloader-animation">
             <div class="preloader-spinner"> </div>
@@ -59,7 +58,7 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
-                <div class="copyrights">© 2020 All rights reserved.</div>
+                <div class="copyrights">©  <span id="currentyear"></span> All rights reserved.</div>
             </div>
         </header>
         <div class="mobile-header mobile-visible">
@@ -1295,25 +1294,7 @@
             return true;
         }
     </script>
-    <script>
-        var cursor = document.getElementById("cursor");
-        var zoom1 = document.getElementsByTagName("h4");
-        window.addEventListener("mousemove", function (e) {
-            let x = e.pageX;
-            let y = e.pageY;
-            cursor.style.left = x + "px";
-            cursor.style.top = y + "px";
-        });
 
-       zoom1[0].forEach(Hfour => {
-           Hfour.addEventListener("mouseleave", () => {
-                cursor.classList.remove("highlight");
-           });
-           Hfour.addEventListener("mouseover", () => {
-                cursor.classList.add("highlight");
-           });
-       });
-    </script>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/pages-switcher.js"></script>
