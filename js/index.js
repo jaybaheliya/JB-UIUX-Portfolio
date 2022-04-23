@@ -26,21 +26,22 @@ document.getElementById("currentyear").innerHTML=cuurentyear;
 
 // Follow the cursor
 
-var cursor = document.querySelector(".cursor");
-const zoom1 = document.getElementsByTagName("h4");
-window.addEventListener("mousemove", function (e) {
-    let x = e.pageX;
-    let y = e.pageY;
-    cursor.style.left = x + "px";
-    cursor.style.top = y + "px";
+document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.querySelector(".cursor");  
+    window.addEventListener("mousemove", function (e) {
+        let x = e.pageX;
+        let y = e.pageY;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+    });    
 });
 
 
 $("h4 , h3").mouseenter(function(){    
-    $(".cursor").addClass("highlight");   
+    $(".cursor").addClass("highlight");
 });
-$("h4").mouseleave(function(){    
-    $(".cursor").removeClass("highlight");   
+$("h4, h3").mouseleave(function(){    
+    $(".cursor").removeClass("highlight");
 });
 
 
